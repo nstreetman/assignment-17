@@ -1,3 +1,5 @@
+//Modeled after in class demo "2017-02-06-nytimes-api"//
+
 console.log ('wired up')
 
 $.getJSON('https://congress.api.sunlightfoundation.com/legislators?callback=?').then(function(serverRes){
@@ -21,18 +23,18 @@ forEach (legislatorObjectsList, function (legislatorObj){
     var legislatorTwitter = legislatorObj.twitter_id;
     var legislatorTermEnd = legislatorObj.term_end;
 
-    var blockDiv = '<div class="legislator-block">'
-    blockDiv     += '<h3>' + legislatorFirstName + " " + legislatorLastName + '</h3>'
-    blockDiv     += '<h4>' + legislatorTitle + "--" + legislatorParty + '</h4>'
+    var blockDiv = '<div class="legislator-container">'
+    blockDiv    +=  '<div class="individual-block">'
+    blockDiv     += '<p class="heading-name">' + legislatorFirstName + " " + legislatorLastName + '</h3>'
+    blockDiv     += '<p class="heading-title">' + legislatorTitle + "--" + legislatorParty + "-" + legislatorState + '</p>'
     blockDiv    +=  '<ul>'
     blockDiv    +=  '<li>' + "email: " + legislatorEmail +'</li>'
     blockDiv    +=  '<li>' + "website: " + legislatorWebsite +'</li>'
     blockDiv    +=  '<li>' + "facebook: " + legislatorFB +'</li>'
     blockDiv    +=  '<li>' + "twitter: " + legislatorTwitter +'</li>'
     blockDiv   += '</ul>'
-    blockDiv   += '</br>'
-    blockDiv     += '<h5>' + "Term Ends: " + legislatorTermEnd + '</h5>'
-
+    blockDiv     += '<p class="footer-term-end">' + "Term Ends: " + legislatorTermEnd + '</p>'
+    blockDiv    += '</div>'
 
     bigHTMLLegisStr += blockDiv
 
