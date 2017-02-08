@@ -23,8 +23,8 @@ forEach (legislatorObjectsList, function (legislatorObj){
     var legislatorTwitter = legislatorObj.twitter_id;
     var legislatorTermEnd = legislatorObj.term_end;
 
-    var blockDiv = '<div class="legislator-container">'
-    blockDiv    +=  '<div class="individual-block">'
+
+    var blockDiv    =  '<div class="individual-block">'
     blockDiv     += '<p class="heading-name">' + legislatorFirstName + " " + legislatorLastName + '</h3>'
     blockDiv     += '<p class="heading-title">' + legislatorTitle + "--" + legislatorParty + "-" + legislatorState + '</p>'
     blockDiv    +=  '<ul>'
@@ -34,7 +34,8 @@ forEach (legislatorObjectsList, function (legislatorObj){
     blockDiv    +=  '<li>' + "twitter: " + legislatorTwitter +'</li>'
     blockDiv   += '</ul>'
     blockDiv     += '<p class="footer-term-end">' + "Term Ends: " + legislatorTermEnd + '</p>'
-    blockDiv    += '</div>'
+    blockDiv += "</div>"
+
 
     bigHTMLLegisStr += blockDiv
 
