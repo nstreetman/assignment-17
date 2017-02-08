@@ -1,16 +1,18 @@
 .legislator-container {
-  display: inline-block;
+  display: block;
   margin: 0px;
   width: 100%; }
 
 .individual-block {
-  display: block;
+  display: inline-block;
+  vertical-align: top;
   background-color: #CDF493;
-  max-width: 33.3333%;
+  width: 33.3333%;
   font-family: Georgia;
   font-size: 1em;
   padding-top: 15px;
   padding-bottom: 15px;
+  padding-left: 5px;
   margin-bottom: 15px;
   margin-left: 10px; }
 
